@@ -1,7 +1,6 @@
 from telethon import TelegramClient, events, Button
 from telethon.sync import TelegramClient, events
 import json
-import difflib
 import fuzzywuzzy
 from fuzzywuzzy import fuzz
 with open('ordianldex.json') as json_file:
