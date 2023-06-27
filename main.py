@@ -536,9 +536,9 @@ async def info_command(event):
     elif len(message) >1:
         try:
             if message[1].split(" ")[0].lower() == 'kamado':
-                await event.reply("Which one?", file = 'https://i.pinimg.com/originals/aa/8d/f4/aa8df474ab958f5c3584de557a409d86.jpg', buttons = [[Button.inline('Tanjiro Kamado','into|tanjiro')], [Button.inline('Nezuko Kamado','into|nezuko')]])
+                await event.reply("Which one?", file = 'https://i.pinimg.com/originals/aa/8d/f4/aa8df474ab958f5c3584de557a409d86.jpg', buttons = [[Button.inline('Tanjiro Kamado','into|tanjiro'+'|'+str(level))], [Button.inline('Nezuko Kamado','into|nezuko'+'|'+str(level))]])
             elif message[1].split(" ")[0].lower() == 'zenin':
-                await event.reply("Which one?", file = 'https://www.xtrafondos.com/wallpapers/maki-zenin-vs-mai-zenin-de-jujutsu-kaisen-7522.jpg', buttons = [[Button.inline('Maki Zenin','into|maki')], [Button.inline('Mai Zenin','into|mai')]])
+                await event.reply("Which one?", file = 'https://www.xtrafondos.com/wallpapers/maki-zenin-vs-mai-zenin-de-jujutsu-kaisen-7522.jpg', buttons = [[Button.inline('Maki Zenin','into|maki'+'|'+str(level))], [Button.inline('Mai Zenin','into|mai'+'|'+str(level))]])
             else:
                 x = gf[message[1].split(" ")[0].lower()]
                 x = data[x]
