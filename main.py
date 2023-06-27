@@ -473,6 +473,7 @@ strtimg = 'https://i.ibb.co/gjRM25X/image.png'
 @client.on(events.NewMessage(pattern='/about'))
 async def start(event):
     if event.is_private:
+        pass
 
 @client.on(events.NewMessage(pattern='/start'))
 async def start(event):
