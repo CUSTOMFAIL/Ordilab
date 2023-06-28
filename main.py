@@ -539,6 +539,9 @@ async def info_command(event):
     if len(message) == 1:
         await event.reply("Use this : `/cinfo` `charactername`\nex: `/cinfo Henry`")
     elif len(message) >1:
+      if "eren" in event.raw_text:
+          await event.reply(file='https://i.pinimg.com/originals/c0/c6/5a/c0c65ac9692cf499ce1ba2b546f365ae.jpg')
+      else:
         try:
             if message[1].split(" ")[0].lower() == 'kamado':
                 await event.reply("Which one?", file = 'https://i.pinimg.com/originals/aa/8d/f4/aa8df474ab958f5c3584de557a409d86.jpg', buttons = [[Button.inline('Tanjiro Kamado','into|tanjiro'+'|'+str(level))], [Button.inline('Nezuko Kamado','into|nezuko'+'|'+str(level))]])
