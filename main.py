@@ -470,10 +470,15 @@ def formatmaking(character, level):
 
 strtimg = 'https://i.ibb.co/gjRM25X/image.png'
 
-@client.on(events.NewMessage(pattern='/about'))
+@client.on(events.NewMessage(pattern='/about|/start about'))
 async def start(event):
     if event.is_private:
-        pass
+        await event.reply("""
+✦ Made Using [Telethon](https://docs.telethon.dev/en/stable/)
+✦ Source Code [here](https://github.com/CUSTOMFAIL/Ordilab)
+✦ Coder/Whole Work: [Nagi](https://t.me/Nagi_X_Seishiro)
+✦ Data/Lolicon : [Billy](https://t.me/wancoins)
+✦ Owner/Free Credits: [Obito](https://t.me/Shadow_Iord)""",link_preview=False)
 
 @client.on(events.NewMessage(pattern='/start'))
 async def start(event):
