@@ -7,6 +7,7 @@ with open('ordianldex.json') as json_file:
     data = json.load(json_file)
 import time
 import os
+import random
 
 token = os.environ.get('TOKEN', None)
 client = TelegramClient('brudhgvmf6', api_id=3344739, api_hash='88d43ee045dd90660b4360ba59fe3c48').start(bot_token=token)
@@ -540,7 +541,13 @@ async def info_command(event):
         await event.reply("Use this : `/cinfo` `charactername`\nex: `/cinfo Henry`")
     elif len(message) >1:
       if "eren" in event.raw_text:
-          await event.reply(file='https://i.pinimg.com/originals/c0/c6/5a/c0c65ac9692cf499ce1ba2b546f365ae.jpg')
+          lis = ['https://i.pinimg.com/originals/c0/c6/5a/c0c65ac9692cf499ce1ba2b546f365ae.jpg',
+                'https://i.ibb.co/y4rs4jd/OIP-bx-PYUPc-Qh-Pt-Mes-NVY3-Opt-AHa-EK-w-285-h-180-c-7-r-0-o-5-dpr-1-3-pid-1.jpg',
+                'https://i.ytimg.com/vi/ovGuUYD98g0/maxresdefault.jpg',
+                'https://i.pinimg.com/736x/6b/dc/fa/6bdcfa87af7f22dfbe3110c8b84bfa55.jpg',
+                'https://i.postimg.cc/XvcNrkhV/image.png',
+                'https://i.pinimg.com/originals/d3/1a/e0/d31ae0e5dbc6f9b42ceee0df8c0253ae.jpg']
+          await event.reply(file=random.choice(lis))
       else:
         try:
             if message[1].split(" ")[0].lower() == 'kamado':
