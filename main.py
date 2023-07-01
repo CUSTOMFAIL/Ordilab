@@ -26,7 +26,9 @@ correction = ['Amon', 'Kotaro', 'Biscuit', 'Krueger', 'Djino', 'Ghatokaca', 'Gla
               'Yuji', 'Itadori', 'Gojo', 'Satoru', 'Megumi', 'Fushiguro', 'Nanami', 'Kento', 'Nobara', 'Kugisaki',
               'Aoi', 'Todo', 'Mechamaru', 'Toge', 'Inumaki', 'Panda', 'Momo', 'Nishimiya', 'Maki', 'Mai', 'Kasumi',
               'Miwa', 'Ryomen', 'Sukuna', 'Noritoshi', 'Kamo', 'Mereum', 'Santa', 'Claus', 'Kishou', 'Arima', 'Death',
-              'Gun', 'Quinella', 'Akaza', 'Daki', 'Boros', 'Mahito']
+              'Gun', 'Quinella', 'Akaza', 'Daki', 'Boros', 'Mahito', 'Eren', 'Levi', 'Mikasa', 'Armin', 'Arlert', 'Reiner',
+              'Braun', 'Annie', 'Leonhart', 'Bertolt', 'Hoover', 'Jean', 'Kirstein', 'Sasha', 'Braus', 'Connie', 'Springer',
+              'Historia', 'Reiss', 'Hange', 'Zoe', 'Erwin', 'Smith', 'Zeke', 'Cart', 'Jaw']
 
 
 def find_best_matches(target, options):
@@ -200,7 +202,33 @@ bf = {'Amon': 'Amon Kotaro',
 'Arima':'Kishou Arima',
 'Quinella':'Quinella',
 'Death': 'Death Gun',
-'Gun':'Death Gun'}
+'Gun':'Death Gun',
+'Eren': 'Eren Yeager',
+'Levi': 'Levi Ackerman',
+'Mikasa': 'Mikasa Ackerman',
+'Armin': 'Armin Arlert',
+'Arlert': 'Armin Arlert',
+'Reiner': 'Reiner Braun',
+'Braun': 'Reiner Braun',
+'Annie': 'Annie Leonhart',
+'Leonhart': 'Annie Leonhart',
+'Bertolt': 'Bertolt Hoover',
+'Hoover': 'Bertolt Hoover',
+'Jean': 'Jean Kirstein',
+'Kirstein': 'Jean Kirstein',
+'Sasha': 'Sasha Braus',
+'Braus': 'Sasha Braus',
+'Connie': 'Connie Springer',
+'Springer': 'Connie Springer',
+'Historia': 'Historia Reiss',
+'Reiss': 'Historia Reiss',
+'Hange': 'Hange Zoe',
+'Zoe': 'Hange Zoe',
+'Erwin': 'Erwin Smith',
+'Smith': 'Erwin Smith',
+'Zeke': 'Zeke Yeager',
+'Jaw': 'Jaw Titan',
+'Cart': 'Cart Titan'}
 
 gf = {'henry':'henry',
  'damian' : 'henry',
@@ -396,7 +424,49 @@ gf = {'henry':'henry',
  'quinella':'quinella',
  'death': 'death',
  'gun':'death',
- 'death gun': 'death'}
+ 'death gun': 'death',
+ 'eren': 'eren',
+'levi': 'levi',
+'mikasa': 'mikasa',
+'armin': 'armin',
+'arlert': 'armin',
+'reiner': 'reiner',
+'braun': 'reiner',
+'annie': 'annie',
+'leonhart': 'annie',
+'bertolt': 'bertolt',
+'hoover': 'bertolt',
+'jean': 'jean',
+'kirstein': 'jean',
+'sasha': 'sasha',
+'braus': 'sasha',
+'connie': 'connie',
+'springer': 'connie',
+'historia': 'historia',
+'reiss': 'historia',
+'hange': 'hange',
+'zoe': 'hange',
+'erwin': 'erwin',
+'smith': 'erwin',
+'zeke': 'zeke',
+'jaw': 'jaw',
+'cart': 'cart',
+'eren yeager': 'eren',
+'levi ackerman': 'levi',
+'mikasa ackerman': 'mikasa',
+'armin arlert': 'armin',
+'reiner braun': 'reiner',
+'annie leonhart': 'annie',
+'bertolt hoover': 'bertolt',
+'jean kirstein': 'jean',
+'sasha braus': 'sasha',
+'connie springer': 'connie',
+'historia reiss': 'historia',
+'hange zoe': 'hange',
+'erwin smith': 'erwin',
+'zeke yeager': 'zeke',
+'jaw titan': 'jaw',
+'cart titan': 'cart'}
 
 morede = {
     "Assassin":"⤷ **Strong against:** `Mage`\n⤷ **Weak against:** `Fighter`",
@@ -429,6 +499,8 @@ def formatmaking(character, level):
         ser = "〖One Punch Man〗"
     if character['series'] == 'jjk':
         ser = "〖Jujutsu Kaisen〗"
+    if character['series'] == 'aot':
+        ser = "〖Attack on Titan〗"
     txt = ""
     if character['ab1'] is None:
         pass
@@ -473,7 +545,6 @@ strtimg = 'https://i.ibb.co/gjRM25X/image.png'
 
 @client.on(events.NewMessage(pattern='/about|/start about'))
 async def start(event):
-    if event.is_private:
         await event.reply("""
 ✦ Made Using [Telethon](https://docs.telethon.dev/en/stable/)
 ✦ Source Code [here](https://github.com/CUSTOMFAIL/Ordilab)
@@ -540,20 +611,17 @@ async def info_command(event):
     if len(message) == 1:
         await event.reply("Use this : `/cinfo` `charactername`\nex: `/cinfo Henry`")
     elif len(message) >1:
-      if "eren" in event.raw_text:
-          lis = ['https://i.pinimg.com/originals/c0/c6/5a/c0c65ac9692cf499ce1ba2b546f365ae.jpg',
-                'https://i.ibb.co/y4rs4jd/OIP-bx-PYUPc-Qh-Pt-Mes-NVY3-Opt-AHa-EK-w-285-h-180-c-7-r-0-o-5-dpr-1-3-pid-1.jpg',
-                'https://i.ytimg.com/vi/ovGuUYD98g0/maxresdefault.jpg',
-                'https://i.pinimg.com/736x/6b/dc/fa/6bdcfa87af7f22dfbe3110c8b84bfa55.jpg',
-                'https://i.postimg.cc/XvcNrkhV/image.png',
-                'https://i.pinimg.com/originals/d3/1a/e0/d31ae0e5dbc6f9b42ceee0df8c0253ae.jpg']
-          await event.reply(file=random.choice(lis))
-      else:
         try:
             if message[1].split(" ")[0].lower() == 'kamado':
                 await event.reply("Which one?", file = 'https://i.pinimg.com/originals/aa/8d/f4/aa8df474ab958f5c3584de557a409d86.jpg', buttons = [[Button.inline('Tanjiro Kamado','into|tanjiro'+'|'+str(level))], [Button.inline('Nezuko Kamado','into|nezuko'+'|'+str(level))]])
             elif message[1].split(" ")[0].lower() == 'zenin':
                 await event.reply("Which one?", file = 'https://www.xtrafondos.com/wallpapers/maki-zenin-vs-mai-zenin-de-jujutsu-kaisen-7522.jpg', buttons = [[Button.inline('Maki Zenin','into|maki'+'|'+str(level))], [Button.inline('Mai Zenin','into|mai'+'|'+str(level))]])
+            elif message[1].split(" ")[0].lower() == 'ackerman':
+                await event.reply("Which one?", file = 'https://telegra.ph/file/42fe8ff17564bc972dca9.jpg', buttons = [[Button.inline('Levi Ackerman','into|levi'+'|'+str(level))], [Button.inline('Mikasa Ackerman','into|mikasa'+'|'+str(level))]])
+            elif message[1].split(" ")[0].lower() == 'yeager:
+                await event.reply("Which one?", file = 'https://telegra.ph/file/04088ab193d0b752ff3e4.jpg', buttons = [[Button.inline('Eren Yeager','into|eren'+'|'+str(level))], [Button.inline('Zeke Yeager','into|zeke'+'|'+str(level))]])
+            elif message[1].split(" ")[0].lower() == 'titan':
+                await event.reply("Which one?", file = 'https://telegra.ph/file/83d823d18082faff5a3f9.jpg', buttons = [[Button.inline('Jaw Titan','into|jaw'+'|'+str(level))], [Button.inline('Cart titan','into|cart'+'|'+str(level))]])
             else:
                 x = gf[message[1].split(" ")[0].lower()]
                 x = data[x]
