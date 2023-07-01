@@ -618,7 +618,7 @@ async def info_command(event):
                 await event.reply("Which one?", file = 'https://www.xtrafondos.com/wallpapers/maki-zenin-vs-mai-zenin-de-jujutsu-kaisen-7522.jpg', buttons = [[Button.inline('Maki Zenin','into|maki'+'|'+str(level))], [Button.inline('Mai Zenin','into|mai'+'|'+str(level))]])
             elif message[1].split(" ")[0].lower() == 'ackerman':
                 await event.reply("Which one?", file = 'https://telegra.ph/file/42fe8ff17564bc972dca9.jpg', buttons = [[Button.inline('Levi Ackerman','into|levi'+'|'+str(level))], [Button.inline('Mikasa Ackerman','into|mikasa'+'|'+str(level))]])
-            elif message[1].split(" ")[0].lower() == 'yeager:
+            elif message[1].split(" ")[0].lower() == 'yeager':
                 await event.reply("Which one?", file = 'https://telegra.ph/file/04088ab193d0b752ff3e4.jpg', buttons = [[Button.inline('Eren Yeager','into|eren'+'|'+str(level))], [Button.inline('Zeke Yeager','into|zeke'+'|'+str(level))]])
             elif message[1].split(" ")[0].lower() == 'titan':
                 await event.reply("Which one?", file = 'https://telegra.ph/file/83d823d18082faff5a3f9.jpg', buttons = [[Button.inline('Jaw Titan','into|jaw'+'|'+str(level))], [Button.inline('Cart titan','into|cart'+'|'+str(level))]])
